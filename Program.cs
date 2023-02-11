@@ -89,21 +89,31 @@ double y2 = Convert.ToDouble(Console.ReadLine());
 Console.WriteLine("Длина отрезка: " + Math.Round(Length(x1, y1, x2, y2), 2));
 */
 // Домашнее задание:
-// Задание 19:
+// Задание 19: Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
 /*
-bool Palindrome(int number)
+bool СhecNum(int num)
 {
     bool result = false;
-     if (number[0] == number[4] && number[1] == number[3]);
+    int rev = 0;
+    int cur = num;
+    while(cur > 0)
     {
-        result = true;
-    }    
+        int d = cur % 10;
+        cur = cur / 10; 
+        rev = rev * 10 + d;
+        if(rev == num) 
+        {
+            result = true; 
+        }
+    }
     return result;
 }
 
-Console.WriteLine("Введите число: ");
-string number = Convert.ToInt32(Console.ReadLine());
-int len = number.Length;
+Console.Write("Input a number ");
+int num = Convert.ToInt32(Console.ReadLine());
+
+bool result = СhecNum(num);
+Console.WriteLine(result);
 */
 // Задание 21:
 // Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
@@ -152,3 +162,4 @@ int N = Convert.ToInt32(Console.ReadLine());
 
 SquareNumbers(N);
 */
+
